@@ -1,8 +1,25 @@
 aid: daze
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/daze.png
 name: Daze
-description: Daze is a company surfaced as a portfolio company of a16z, kindred-ventures, menlo-ventures
-  and added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the
-  enrichment pipeline.
+description: >-
+  Daze is a mobile "freeform chat" application for iOS and Android, published by Marble Media
+  (Android package com.marblemedia.dazechat, iOS App Store id 6497405419). It is a consumer social
+  messaging product with an active Discord community and is venture-backed by a16z, Kindred Ventures,
+  and Menlo Ventures. As of this enrichment pass, Daze exposes no public API, developer portal, SDKs,
+  documentation, or machine-readable discovery surface (all /.well-known/ and /llms.txt probes returned
+  404); it is a consumer app rather than an API provider. This profile is maintained in the API
+  Evangelist network as a portfolio-lead company record.
 url: https://raw.githubusercontent.com/api-evangelist/daze/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -14,9 +31,14 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
 tags:
 - Company
+- Chat
+- Messaging
+- Social
+- Mobile
+- Consumer
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -24,5 +46,21 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/daze-domain-security.yml
 - type: Website
   url: https://daze.chat/
+- type: Support
+  name: Discord Community
+  url: https://discord.com/invite/Z4dWvVARxh
+- type: iOSApp
+  name: Daze on the App Store
+  url: https://apps.apple.com/us/app/daze-freeform-chat/id6497405419
+- type: AndroidApp
+  name: Daze on Google Play
+  url: https://play.google.com/store/apps/details?id=com.marblemedia.dazechat
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
